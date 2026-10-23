@@ -21,7 +21,7 @@ Head to [https://www.probabilistic-numerics.org/](https://www.probabilistic-nume
 ---
 #### Next Conference
 
-[**ProbNum 2027**](/2027): Autumn 2027 at Lund University, Sweden. 
+- [**ProbNum 2027**](/2027): Autumn 2027 at Lund University, Sweden. 
 
 ---
 #### Previous Conferences
