@@ -27,7 +27,7 @@ Head to [https://www.probabilistic-numerics.org/](https://www.probabilistic-nume
 #### Previous Conferences
 
 - [**ProbNum 2026**](/2026): 9–11 September 2026 at LUT University, Lappeenranta, Finland. Proceedings: [PMLR 341](https://proceedings.mlr.press/v341/).
-- [**ProbNum 2025**](/2025): 1–3 September 2025 at EURECOM, Sophia Antipolis, France. Proceedings: [PMLR 271](https://proceedings.mlr.press/v271/)
+- [**ProbNum 2025**](/2025): 1–3 September 2025 at EURECOM, Sophia Antipolis, France. Proceedings: [PMLR 271](https://proceedings.mlr.press/v271/).
 
 ---
 #### Earlier Meetings
