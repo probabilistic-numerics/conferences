@@ -1,0 +1,210 @@
+% Style file for submissions to the 2027 Conference on Probabilistic Numerical Methods, in Lund, Sweden.
+% 
+% Philipp Hennig
+% Last Revision: October 2027
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ProbNum27}[2026/10/23 Probabilistic Numerics 2027 Conference Style Package]
+
+\newcommand{\@probnumordinal}{3\textsuperscript{rd}}
+\newcommand{\@probnumyear}{2027}
+\newcommand{\probnumyearpublic}{2027}
+\newcommand{\@probnumlocation}{Lund, Sweden}
+\newcommand{\@probnumvolume}{TBA}  % PMLR volume
+
+%%%%%%%%%%%%%%%%% Options %%%%%%%%%%%%%%%%%
+% We offer three options for the submission type:
+% - "submission" for anonymous submissions
+% - "preprint" for preprint uploads to arXiv or similar
+% - "final" for camera-ready versions
+\newif\if@probnumfinal\@probnumfinalfalse
+\DeclareOption{final}{\@probnumfinaltrue}
+
+\newif\if@probnumpreprint\@probnumpreprintfalse
+\DeclareOption{preprint}{\@probnumpreprinttrue}
+
+% We use hyperref, but allow authors to disable it:
+\newif\if@hyperref\@hyperreftrue
+\DeclareOption{nohyperref}{\@hyperreffalse}
+
+\ProcessOptions\relax
+
+% Default is submission
+\newif\if@probnumsubmission\@probnumsubmissiontrue
+% Preprint and final are not anonymous:
+\if@probnumpreprint\@probnumsubmissionfalse\fi
+\if@probnumfinal\@probnumsubmissionfalse\fi
+
+
+%%%%%%%%%%%%%%%%% Packages %%%%%%%%%%%%%%%%%
+% \usepackage[T1]{fontenc} % forcing T1 font encoding (this will use cm-super on systems that have it)
+\RequirePackage{xcolor}
+\RequirePackage{tikz}
+
+\if@hyperref
+    \RequirePackage{hyperref}
+\fi
+
+% \usepackage{cmbright}
+% \renewcommand{\familydefault}{\rmdefault}
+\RequirePackage{sectsty}
+\sectionfont{\fontsize{14}{14}\sffamily\selectfont}
+\subsectionfont{\fontsize{12}{12}\sffamily\selectfont}
+\subsubsectionfont{\fontsize{10}{10}\sffamily\selectfont}
+% \allsectionsfont{\sffamily}
+
+\RequirePackage{booktabs}
+
+\usepackage{caption,sansmath}
+\DeclareCaptionFont{sansmath}{\sansmath}
+\captionsetup{font={small,sf,sansmath}}
+\captionsetup[algorithm]{font={small,sf,sansmath}}
+
+% set up page layout:
+\usepackage[verbose=true,a4paper]{geometry}
+\AtBeginDocument{
+    \newgeometry{
+        top = 1.5cm,
+        bottom = 1.5cm,
+        % left = 1.5cm,
+        % right = 1.5cm,
+        textwidth = 500pt,
+        headheight = 12pt,
+        headsep = 25pt,
+        footskip = 20pt,
+        twocolumn,
+        columnsep = 20pt
+    }
+}
+
+% color scheme:
+\definecolor{probnumdark}{RGB}{128, 128, 128}
+\definecolor{probnumhighlight}{RGB}{214, 40, 40}
+\definecolor{probnumhighlightbright}{RGB}{252, 191, 73}
+\definecolor{probnumlight}{RGB}{234, 226, 183}
+
+% hyperref setup:
+\if@probnumsubmission
+    \if@hyperref
+        \hypersetup{pdfauthor={Anonymous Authors}}
+    \fi
+    % line numbers for submitted papers
+    % the "switch" option enables two-column numbering
+    \RequirePackage[switch]{lineno}
+    \renewcommand{\linenumberfont}{\tiny\sf\color{probnumhighlight}}
+    \linenumbers
+
+    \newcommand{\Notice@String}{\textcolor{probnumhighlight}{Preliminary work. Under review by ProbNum \@probnumyear. Copyright with the authors. Do not distribute.}}
+\else
+    % If the document is compiled in 'submission' mode, the lineno-package makes the aux-files track a '\@LN' command. To allow switching between 'submission', 'preprint', and 'final' mode without having to delete aux files, we define this empty command here:
+    %
+    % Source: https://tex.stackexchange.com/questions/125777/problem-with-package-lineno
+    \providecommand{\@LN}[2]{}
+\fi
+
+\if@probnumfinal
+    \newcommand{\Notice@String}{Proceedings of the \@probnumordinal\,International Conference on Probabilistic
+        Numerics (ProbNum) \@probnumyear,\\ \@probnumlocation\@. PMLR Volume \@probnumvolume. Copyright
+        \@probnumyear\/ with the author(s)}
+\fi
+
+\if@probnumpreprint
+     \newcommand{\Notice@String}{}
+\fi
+
+\if@hyperref
+    \hypersetup{
+        pdfsubject = {ProbNum 2027},
+        pdftitle = {},
+        pdfborder = 0 0 0,
+        pdfpagemode = UseNone,
+        colorlinks = true,
+        linkcolor = probnumhighlight,
+        citecolor = probnumhighlight,
+        urlcolor = probnumhighlight,
+        filecolor = probnumdark,
+    }
+\fi
+
+% spacing for paragraphs and lists
+\parindent 0pt
+\topsep 4pt plus 1pt minus 2pt
+\partopsep 1pt plus 0.5pt minus 0.5pt
+\itemsep 2pt plus 1pt minus 0.5pt
+\parsep 2pt plus 1pt minus 0.5pt
+\parskip .5pc
+
+\columnseprule=0pt
+
+% Fontsizes
+\def\@normalsize{\@setsize\normalsize{10pt}\xpt\@xpt}
+\def\small{\@setsize\small{9pt}\ixpt\@ixpt}
+\def\footnotesize{\@setsize\footnotesize{9pt}\ixpt\@ixpt}
+\def\scriptsize{\@setsize\scriptsize{8pt}\viiipt\@viiipt}
+\def\tiny{\@setsize\tiny{7pt}\viipt\@viipt}
+\def\large{\@setsize\large{14pt}\xivpt\@xivpt}
+\def\Large{\@setsize\Large{15pt}\xivpt\@xivpt}
+\def\LARGE{\@setsize\LARGE{20pt}\xxpt\@xxpt}
+\def\huge{\@setsize\huge{23pt}\xxpt\@xxpt}
+\def\Huge{\@setsize\Huge{28pt}\xxvpt\@xxvpt}
+
+% abstract setup:
+
+\newcommand\probnumtitle[1]{\newcommand\valueofprobnumtitle{#1}}
+\newcommand\probnumauthors[1]{\newcommand\valueofprobnumauthors{#1}}
+\newcommand\probnumabstract[1]{\newcommand\valueofprobnumabstract{#1}}
+
+\newcommand{\name}[1]{{#1}}
+\newcommand{\affiliation}[1]{\hfill{\itshape #1}}
+\renewcommand{\and}{\vskip 2pt}
+% \newcommand{\email}[1]{{\hfill \tt #1}}
+
+% title setup:
+\providecommand{\probnummaketitle}{}
+\renewcommand{\probnummaketitle}{
+    \begin{center}
+        % {\color{black}\rule[0mm]{\textwidth}{2pt}}
+        % \vspace*{5mm}\par
+        \textcolor{black}{\huge\sf\bfseries\valueofprobnumtitle}
+    \end{center}
+    \vskip 3mm
+    \textcolor{black}{%
+    \if@probnumsubmission
+        {\sf Anonymous Authors \hfill \itshape identities and affiliations suppressed for double-blind review}
+    \else
+        {\sf\valueofprobnumauthors}%
+    \fi}
+    \vskip 2mm
+    \begin{center}
+        \begin{tikzpicture}
+            \node[anchor=north, text width=.9\textwidth, text=black, font=\sf,fill=black!10!white, rounded corners=0.0em, inner sep=1em, align=justify] (abstract) at (0,0) {%
+                \begin{minipage}{\textwidth}
+                    \centerline{\large \sffamily Abstract}%
+                    \vskip 0.5em
+                    \valueofprobnumabstract
+                    \par
+                    \vskip 0.5em
+                \end{minipage}};
+        \end{tikzpicture}
+        \vskip 1mm
+            {\sf \footnotesize \Notice@String\par}
+            {\color{black}\rule[0mm]{\textwidth}{.75pt}}
+    \end{center}\vspace*{4mm}
+}
+
+\AddToHook{begindocument/end}{
+    \twocolumn[\probnummaketitle]
+}
+
+% Setup for Pseudocode:
+\RequirePackage{algorithm}
+\usepackage[noEnd=true,
+    indLines=true,
+    italicComments=false,
+    rightComments=true,
+    commentColor=probnumdark]{algpseudocodex}
+\algrenewcommand\alglinenumber[1]{\textcolor{black}{\tiny\sf #1}}
+\tikzset{algpxIndentLine/.style={draw=probnumdark,solid}}
+\tikzset{algpxDefaultBox/.style={fill=probnumhighlightbright,rounded corners, draw=none}}
+
+\endinput
