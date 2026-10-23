@@ -37,8 +37,12 @@ A [probabilistic numerical method](https://en.wikipedia.org/wiki/Probabilistic_n
 ProbNum 2026 aims to be an inclusive, enjoyable venue for the discussion, dissemination and promotion of such ideas. We welcome submissions from researchers in academia and industry, from theory to applications. We also invite interested participants who want to learn more about the field without submitting their own yet to attend.
 
 ---
-#### Past Meetings
-ProbNum 2027 is the latest edition of a series of events on Probabilistic Numerics since 2012. Past events can be found [here](https://www.probabilistic-numerics.org/meetings/).
+#### Past Conferences and Proceedings
+
+- [**ProbNum 2026**](/2026): 9–11 September 2026 at LUT University, Lappeenranta, Finland. Proceedings: [PMLR 341](https://proceedings.mlr.press/v341/).
+- [**ProbNum 2025**](/2025): 1–3 September 2025 at EURECOM, Sophia Antipolis, France. Proceedings: [PMLR 271](https://proceedings.mlr.press/v271/).
+
+Earlier meetings can be found [here](https://www.probabilistic-numerics.org/meetings/).
 
 ---
 #### Organisers  
