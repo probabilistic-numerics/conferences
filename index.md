@@ -1,6 +1,7 @@
 ---
 title: "ProbNum Conferences"
 layout: home
+header_image: pn-logo-dark-txtbelow.svg
 description: "ProbNum is the international conference series on Probabilistic Numerics, methods for statistically solving numerical problems and probabilistically quantifying the numerical errors as computational uncertainties."
 ---
 ## **ProbNum: The International Conference on Probabilistic Numerics**

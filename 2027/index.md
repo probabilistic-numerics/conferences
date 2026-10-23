@@ -1,6 +1,6 @@
 ---
 title: "ProbNum 2027"
-header_image: pn-logo-dark-txtbelow.svg
+#  header_image: LUT.jpg
 ---
 ## **ProbNum 2027: The 3rd International Conference on Probabilistic Numerics**
 ### Autumn 2027 in Lund, Sweden
