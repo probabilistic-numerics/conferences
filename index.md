@@ -33,6 +33,16 @@ Head to [https://www.probabilistic-numerics.org/](https://www.probabilistic-nume
 #### Earlier Meetings
 The ProbNum conferences build on a series of events on Probabilistic Numerics held since 2012, including workshops at NeurIPS, a Dagstuhl seminar and spring schools. These earlier meetings are listed on [probabilistic-numerics.org](https://www.probabilistic-numerics.org/meetings/).
 
+---
+#### Current Organisers
+
+- [Filip Tronarp](https://filtron.github.io) (Lund University, Sweden)
+- [Nathanael Bosch](https://nathanaelbosch.github.io/) (EPFL, Switzerland)
+- [Jon Cockayne](https://joncockayne.me/) (University of Southampton, UK)
+- [Alexandra Gessner](https://github.com/alpiges) (Astrazeneca, Spain)
+- [Philipp Hennig](https://uni-tuebingen.de/en/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/lehrstuehle/methods-of-machine-learning/start/) (University of Tuebingen, Germany)
+- [Toni Karvonen](https://tskarvone.github.io) (LUT University, Finland)
+- [Wouter Kouw](https://wmkouw.github.io) (TU Eindhoven, Netherlands)
 
 ---
 #### Contact Information
