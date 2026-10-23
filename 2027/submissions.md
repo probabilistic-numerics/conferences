@@ -61,7 +61,7 @@ Submissions are full papers limited to up **8 pages** excluding references, ackn
 Shorter submissions are very welcome and will be equally considered. Any appendices may be submitted as part of the main `pdf` or separately as supplementary material.
 
 **Formatting instructions**  
-Submissions must use the [**ProbNum LaTeX style package**](/files/ProbNum26_StylePack.zip). Detailed instructions can be found in the file *FormattingInstructions.tex* in this zip file. Please do not modify the style file. Formatting instructions are available in the sample paper provided with the style package.
+Submissions must use the [**ProbNum LaTeX style package**](/2027/files/ProbNum27_StylePack.zip). Detailed instructions can be found in the file *FormattingInstructions.tex* in this zip file. Please do not modify the style file. Formatting instructions are available in the sample paper provided with the style package.
 
 **Anonymization**  
 The ProbNum 2027 review process is double-blind. All submissions must be anonymized and may not contain any information that can violate the double-blind reviewing policy, such as the author names or their affiliations, acknowledgements, or links that can infer any author’s identity or institution. Self-citations are allowed as long as anonymity is preserved.
