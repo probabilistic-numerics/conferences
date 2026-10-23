@@ -9,7 +9,8 @@ title: "ProbNum 2027 &ndash; Submissions"
 
 <!-- If you would like to review for ProbNum 2027, please fill in the [reviewer self-nomination form](https://docs.google.com/forms/d/e/1FAIpQLSdMBkGISvwb1tpTjHsYScsFGeDLwkjQRjugopxicghmoUMqbA/viewform?usp=publish-editor). -->
 
----
+<!-- --- -->
+
 ## Call for Papers
 
 ProbNum 2027 will have a dedicated volume in the [Proceedings of Machine Learning Research (PMLR)](https://proceedings.mlr.press), where accepted papers will be published. A submission should be up to **8 pages (or shorter)** using dedicated style files (appendix excluded). The submission deadline is scheduled for the **spring 2027**.
